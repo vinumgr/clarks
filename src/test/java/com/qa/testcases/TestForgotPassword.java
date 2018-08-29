@@ -3,8 +3,10 @@ package com.qa.testcases;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -21,7 +23,7 @@ public class TestForgotPassword extends Globals {
 		System.setProperty("browser", "Chrome");
 		setUp();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		browserNav(QA_CoverStoryURL);
+		browserNav(QA_ClarksURL);
 	}
 
 	@Test(priority = 0)
@@ -31,9 +33,7 @@ public class TestForgotPassword extends Globals {
 		ForgotPassword password = new ForgotPassword(driver);
 		Thread.sleep(10000);
 		lgin.loginIcon.click();
-		lgin.loginButton.click();
-		Thread.sleep(3000);
-		password.forgotPassword.click();
+		password.forgotPassword.click();	
 		Thread.sleep(3000);
 		password.resetPassword.click();
 		log(Excelutility.excelData(2, 0, 0));
@@ -41,7 +41,7 @@ public class TestForgotPassword extends Globals {
 		password.proceedButoon.click();
 		Assert.assertEquals("Reset Password Link Sent", password.ResetPwd.getAttribute("innerText"),
 				"Text not matched | ");
-		password.closeResetPwd.click();
+		//password.closeResetPwd.click();
 	}
 
 	@Test(priority = 1)

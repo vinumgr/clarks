@@ -24,17 +24,6 @@ public class TestCswLogin extends Globals {
 		setUp();
 		driver.manage().deleteAllCookies();
 		browserNav(QA_ClarksURL);		
-		
-		/*ChromeOptions options = new ChromeOptions();
-		options.addArguments("start-maximized");
-		options.addArguments("test-type");
-		options.addArguments("enable-strict-powerful-feature-restrictions");
-		options.addArguments("disable-geolocation");
-		cap.setCapability(ChromeOptions.CAPABILITY, options);
-		cap = cap.merge(DesiredCapabilities.chrome());
-		driver = new ChromeDriver();
-		browserNav(QA_ClarksURL);*/
-
 	}
 
 	// Test case for Login with Valid credentials
@@ -43,17 +32,9 @@ public class TestCswLogin extends Globals {
 	public void coverStoryEmailLogin() throws Exception {
 
 		LoginPageobjects lgin = new LoginPageobjects(driver);
-		AccountPage account = new AccountPage(driver);
-		
+		AccountPage account = new AccountPage(driver);	
 		 Thread.sleep(10000);
-		//WebDriverExplicitWait(driver, 10, "Xpath", Constants.loginIcon);
-		/* Alert simpleAlert = driver.switchTo().alert();
-			String alertText = simpleAlert.getText();
-			System.out.println("Alert text is " + alertText);
-			simpleAlert.accept();*/
-		 
-		 
-		 
+		//WebDriverExplicitWait(driver, 10, "Xpath", Constants.loginIcon); 
 		lgin.loginIcon.click();
 		Reporter.log("Email : Login Icon clicked", true);
 		//lgin.loginButton.click();
@@ -255,9 +236,9 @@ public class TestCswLogin extends Globals {
 	}
 
 	// Closing the Browser:
-	/*@AfterTest
+	@AfterTest
 	public void closeBrowser() {
 		browserClose();
-	}*/
+	}
 
 }

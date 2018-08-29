@@ -14,7 +14,7 @@ public class ForgotPassword extends Globals {
 
 	// Define the page Objects
 
-	@FindBy(xpath = "//*[@id='login_form']/div[2]/div[1]/div[1]/a")
+	@FindBy(xpath = "//*[@id='form-account-create-t']/fieldset/div[4]/a")
 	public WebElement forgotPassword;
 
 	@FindBy(xpath = "//*[@id='form-account-create-t-reset']/fieldset/div[3]/div/div/label/span")

@@ -16,7 +16,7 @@ public class LoginPageobjects extends Globals {
 	}
 	// Define the page Objects
 
-	@FindBy(xpath = "")
+	@FindBy(xpath = "/html/body/div[11]/div/a")
 	public WebElement cookiesButton;
 	
 	@FindBy(xpath = "//*[@id='InputBoxpincode']")

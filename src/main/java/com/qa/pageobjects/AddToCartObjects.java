@@ -44,17 +44,24 @@ public class AddToCartObjects extends Globals {
 	@FindBy(xpath = ".//*[@id='content']/div[5]/div[1]/div[1]/div/div[4]/div[1]/div[2]/div[1]/div/span[6]")
 	public WebElement sixthSizeBox;
 	
-	@FindBy(xpath = ".//*[@id='pdp-add-tocart-btn']")
+	@FindBy(xpath = "//*[@id='pdp-add-tocart-btn']")
 	public WebElement addTocartButtonPDP;
 	
-	@FindBy(xpath = "//a[@title='SHOPPING BAG']")
+	@FindBy(xpath = "//*[@id='pdp-add-tocart-btn']")
 	public WebElement addTocartIconPDP;
 	
-	@FindBy(xpath = ".//*[@id='items_minicart_overlay_1']/div[@class='product-info col-sm-8 col-md-8']/a[1]")
+	@FindBy(xpath = "//*[@id='items_minicart_overlay_1']/div[2]/a[1]")
 	public WebElement removeMinicartSymbol;
 	
-	@FindBy(xpath = "//button[@class='btn remove-item cart-pop-btn']")
+	@FindBy(xpath = "//*[contains(text(),'REMOVE')]")
 	public WebElement removeMinicartButton;
+	
+	//@FindBy(xpath = "//a[@class='close-icon show-alert-cartremoval visible-xs']")
+	@FindBy(xpath = "//*[@id='items_overlay_1']/div[7]/a[1]")
+	public WebElement removeFromCartSymbol;
+	
+	@FindBy(xpath = "//*[contains(text(),'REMOVE')]")
+	public WebElement removeFromCartButton;
 
 	/*@FindBy(xpath = "//h3[@class='widgettitle'][contains(text(),'All New')]")
 	public WebElement allNew;
