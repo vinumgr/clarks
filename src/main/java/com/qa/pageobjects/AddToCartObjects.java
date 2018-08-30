@@ -14,6 +14,8 @@ public class AddToCartObjects extends Globals {
 	}
 
 	// Define the page Objects
+	
+	
 
 	@FindBy(xpath = ".//*[@id='Mens']/span[1]")
 	public WebElement mens;
@@ -21,6 +23,10 @@ public class AddToCartObjects extends Globals {
 	@FindBy(xpath = "/html/body/header/div[3]/div/div[3]/div/ul/li[3]/ul/li[1]/a/span")
 	//@FindBy(xpath = "//div[@class='submenu-content-container']")
 	public WebElement mensBlackShoes;
+	
+	@FindBy(xpath = "/html/body/header/div[3]/div/div[3]/div/ul/li[2]/ul/li[2]/a/span")
+	//@FindBy(xpath = "//div[@class='submenu-content-container']")
+	public WebElement allStyles;
 	
 	
 	@FindBy(xpath = ".//*[@id='productsCatalog']/li[1]/div/div[2]/a/img")
@@ -47,7 +53,7 @@ public class AddToCartObjects extends Globals {
 	@FindBy(xpath = "//*[@id='pdp-add-tocart-btn']")
 	public WebElement addTocartButtonPDP;
 	
-	@FindBy(xpath = "//*[@id='pdp-add-tocart-btn']")
+	@FindBy(xpath = "/html/body/header/div[3]/div/div[4]/div/div/div[1]/a")
 	public WebElement addTocartIconPDP;
 	
 	@FindBy(xpath = "//*[@id='items_minicart_overlay_1']/div[2]/a[1]")

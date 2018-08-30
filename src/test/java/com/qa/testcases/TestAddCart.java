@@ -77,7 +77,7 @@ public class TestAddCart extends Globals {
 			// WebDriverExplicitWait(driver, 10, "Xpath",
 			// Constants.cartIcon_PDP);
 			moveToElement(addcart.addTocartIconPDP);
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			// WebDriverExplicitWait(driver, 10, "Xpath",
 			// Constants.removeFromMiniCartSymbol);
 			addcart.removeMinicartSymbol.click();
@@ -99,9 +99,9 @@ public class TestAddCart extends Globals {
 		boolean outOfStock = false;
 		LoginPageobjects lgin = new LoginPageobjects(driver);
 		AddToCartObjects addcart = new AddToCartObjects(driver);
-		lgin.cookiesButton.click();
+		/*lgin.cookiesButton.click();
 		CommonMethods.loginViaEmail();
-		Thread.sleep(5000);
+		Thread.sleep(5000);*/
 		moveToElement(addcart.mens);
 		Thread.sleep(5000);
 		addcart.mensBlackShoes.click();
@@ -155,68 +155,48 @@ public class TestAddCart extends Globals {
 	@Test(priority = 2)
 
 	public void AddToCart() throws Exception {
-		AddToCartObjects addcart = new AddToCartObjects(driver);
 		boolean outOfStock = false;
-		CommonMethods.loginViaEmail();
-		Thread.sleep(7000);
-		addcart.cartIcon_PDP.click();
-		moveToElement(addcart.removeFromMiniCartSymbol);
-	while(addcart.removeFromMiniCartSymbol.isEnabled()){
-		addcart.removeFromMiniCartSymbol.click();
-		Thread.sleep(3000);
-		addcart.removeFromMiniCartButton.click();
-		Thread.sleep(7000);
-		addcart.cartIcon_PDP.click();
-		Thread.sleep(7000);
-		}
-	}	
+		LoginPageobjects lgin = new LoginPageobjects(driver);
+		AddToCartObjects addcart = new AddToCartObjects(driver);
+		moveToElement(addcart.mens);
 		Thread.sleep(5000);
-		// WebDriverExplicitWait(driver, 10, "Xpath", Constants.clothing);
-		moveToElement(addcart.clothing);
-		// Thread.sleep(2000);
-		WebDriverExplicitWait(driver, 10, "Xpath", Constants.dressAndJumpsuits);
-		addcart.dressAndJumpsuits.click();
-		addcart.jumpsuits.click();
-		// scrollBottom();
-		// Thread.sleep(6000);
-		WebDriverExplicitWait(driver, 10, "Xpath", Constants.PLPTwo);
-		addcart.PLPTwo.click();
-
-		// Thread.sleep(5000);
-		if (!elementHasClass(addcart.selectSizeXS, "disabled")) {
-			addcart.selectSizeXS.click();
+		addcart.mensBlackShoes.click();
+		addcart.firstBlackShoe.click();
+		if (!elementHasClass(addcart.firstSizeBox, "disabled")) {
+			addcart.firstSizeBox.click();
 			System.out.println("Extra Small size is selected");
 
-		} else if (!elementHasClass(addcart.selectSizeS, "disabled")) {
-			addcart.selectSizeS.click();
+		} else if (!elementHasClass(addcart.SecondSizeBox, "disabled")) {
+			addcart.SecondSizeBox.click();
 			System.out.println("Small size is selected");
 
-		} else if (!elementHasClass(addcart.selectSizeM, "disabled")) {
-			addcart.selectSizeM.click();
+		} else if (!elementHasClass(addcart.thirdSizeBox, "disabled")) {
+			addcart.thirdSizeBox.click();
 			System.out.println("Medium size is selected");
 
-		} else if (!elementHasClass(addcart.selectSizeL, "disabled")) {
-			addcart.selectSizeL.click();
+		} else if (!elementHasClass(addcart.fourthSizeBox, "disabled")) {
+			addcart.fourthSizeBox.click();
 			System.out.println("Large size is selected");
 
+		} else if (!elementHasClass(addcart.fifthSizeBox, "disabled")) {
+			addcart.fifthSizeBox.click();
+			System.out.println("Large size is selected");
+			
+		} else if (!elementHasClass(addcart.sixthSizeBox, "disabled")) {
+			addcart.sixthSizeBox.click();
+			System.out.println("Large size is selected");
+			
 		} else {
 			System.out.println("Product is Out of stock");
 			outOfStock = true;
 		}
-
 		if (!outOfStock) {
-			// Thread.sleep(3000);
-			// WebDriverExplicitWait(driver, 10, "Xpath",
-			// Constants.addTocartButton);
-			addcart.addTocartButton.click();
+			 Thread.sleep(3000);
+			//WebDriverExplicitWait(driver, 10, "Xpath", Constants.addTocartButton);
+			addcart.addTocartButtonPDP.click();
+			Reporter.log("Item added from main cart successfully", true);
 			Thread.sleep(7000);
-			// WebDriverExplicitWait(driver, 10, "Xpath",
-			// Constants.cartIcon_PDP);
-			addcart.cartIcon_PDP.click();
-			// Thread.sleep(3000);
-			WebDriverExplicitWait(driver, 10, "Xpath", Constants.viewCartButton_PDP);
-			addcart.viewCartButton_PDP.click();
-			// captureScreen();
+			addcart.addTocartIconPDP.click();
 		}
 	}
 

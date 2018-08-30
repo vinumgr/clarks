@@ -5,8 +5,7 @@
     <classes>
       <class name="com.qa.testcases.TestAddCart">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="RemoveFromMinicart"/>
+          <include name="AddToCart"/>
           <include name="launchUrl"/>
         </methods>
       </class> <!-- com.qa.testcases.TestAddCart -->

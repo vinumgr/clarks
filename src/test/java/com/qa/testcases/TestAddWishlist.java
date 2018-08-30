@@ -19,7 +19,7 @@ public class TestAddWishlist extends Globals {
 		System.setProperty("browser", "Chrome");
 		setUp();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		browserNav(QA_CoverStoryURL);
+		browserNav(QA_ClarksURL);
 		// browserNav(QA_FutureGroup_UserName);
 		// browserNav(QA_FutureGroup_Password);
 
@@ -56,7 +56,7 @@ public class TestAddWishlist extends Globals {
 	 * }
 	 */
 
-	@Test(priority = 1)
+	@Test(priority = 0)
 
 	public void AddToWishlistQuickviewLogin() throws Exception {
 		LoginPageobjects lgin = new LoginPageobjects(driver);
@@ -68,20 +68,25 @@ public class TestAddWishlist extends Globals {
 		Reporter.log("Login successful", true);
 		Thread.sleep(10000);
 		// WebDriverExplicitWait(driver, 30, "Xpath", Constants.loginIcon);
-		lgin.loginIcon.click();
+		//lgin.loginIcon.click();
 		// Thread.sleep(10000);
-		WebDriverExplicitWait(driver, 30, "Xpath", Constants.wishlistInAccount);
+		//WebDriverExplicitWait(driver, 30, "Xpath", Constants.wishlistInAccount);
+		
+		moveToElement(addcart.women);
+		Thread.sleep(5000);
+		addcart.mensBlackShoes.click();
+		
 		addwishlist.wishlistInAccount.click();
 		Reporter.log("Wishlist section opened successful", true);
 		scrollBottom();
 		Thread.sleep(3000);
 		//WebDriverExplicitWait(driver, 30, "Xpath", Constants.wishlistInAccount);
-		if (addwishlist.wishlistClearallButton.isDisplayed()) {
+	/*	if (addwishlist.wishlistClearallButton.isDisplayed()) {
 			addwishlist.wishlistClearallButton.click();
 			System.out.println("Clear wishlist button is clicked");
 		}else{
 			System.out.println("Wishlist is empty");
-		}
+		}*/
 		//VerifyTextPresent(addwishlist.wishlistClearallButton, 10);
 		Thread.sleep(3000);
 		// WebDriverExplicitWait(driver, 10, "Xpath", Constants.clothing);

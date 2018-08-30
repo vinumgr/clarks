@@ -14,6 +14,22 @@ public class AddToWishlist_PO extends Globals {
 	}
 
 	// WishList Icon In PLP for signed out user
+	
+	@FindBy(xpath = "//*[@id='Womens']/span[1]")
+	public WebElement women;
+	
+	@FindBy(xpath = "/html/body/header/div[3]/div/div[3]/div/ul/li[2]/ul/li[2]/a/span")
+	public WebElement allStyles;
+	
+	@FindBy(xpath = "//*[@id='productsCatalog']/li[1]/div/div[2]/div[2]")
+	public WebElement wishlistIConPLP;
+	
+	@FindBy(xpath = "//*[@id='content']/div[5]/div[1]/div[1]/div/div[4]/div[1]/div[3]/div/div[2]/span/a/i")
+	public WebElement wishlistIconSignInPDP;
+	
+	/*@FindBy(xpath = "//*[@id='Womens']/span[1]")
+	public WebElement wishlistIconPLP;
+	
 	@FindBy(xpath = "//*[@id='productsCatalog']/li[1]/div/div[2]/a/div/div[1]/span")
 	public WebElement wishlistIconPLP;
 
@@ -68,7 +84,7 @@ public class AddToWishlist_PO extends Globals {
 	
 	@FindBy(xpath = "//*[@id='productsCatalog']/li[1]/div/div[2]/a/div/div[1]/span")
 	public WebElement wishlistPLPItemAddedPDPMsg;
-	
+	*/
 	
 	//
 
